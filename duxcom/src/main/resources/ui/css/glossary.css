@@ -1,0 +1,20 @@
+
+
+.mainFxmlClass {
+    -fx-background-color: rgba(0, 0, 0, 1);
+    -fx-cursor: move;
+}
+
+#contentText {
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+}
+
+#tabPane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+#tabPane
+{
+    -fx-tab-min-width:90px;
+}

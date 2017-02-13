@@ -1,0 +1,744 @@
+====== ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java ======
+111e515d duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-03 20:03:55 +1000 159)      * Stops the current game by destroying the current game manager and shutting down all
+111e515d duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-03 20:03:55 +1000 178)         if (gameManager != null) {
+111e515d duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-03 20:03:55 +1000 179)             gameManager = null;
+111e515d duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-03 20:03:55 +1000 180)         }
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 258) 
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 259) 	/**
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 260) 	 * Enable and disable user's ability to click buttons or interact with main pane.
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 261) 	 *
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 262) 	 * Used for instructions/cut-scenes when the player should not be able to play the game.
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 263) 	 *
+da55ba51 duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-16 19:34:24 +1000 264) 	 * @param disable If true, disable. If false, enable.
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 265) 	 */
+ff916a93 duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-15 16:59:24 +1000 266) 	public void setDisableUserInteraction(boolean disable) {
+ff916a93 duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-15 16:59:24 +1000 267) 		uiController.setDisableInteraction(disable);
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 268) 	}
+ff916a93 duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-15 16:59:24 +1000 269) 
+1feb01da duxcom/src/main/java/uq/deco2800/duxcom/controllers/DuxComController.java (Patrick Doolan                           2016-10-13 19:08:33 +1000 270) 
+====== duxcom/src/main/java/uq/deco2800/duxcom/controllers/UserInterfaceController.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/dataregisters/HeroDataRegister.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/AbstractHero.java ======
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/AbstractHero.java (Patrick Doolan                           2016-08-27 14:20:08 +1000   17) import uq.deco2800.duxcom.entities.heros.listeners.ActionPointListener;
+c03404b0 duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/AbstractHero.java (Patrick Doolan                           2016-09-14 18:53:45 +1000  363) 
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/AbstractHero.java (Patrick Doolan                           2016-08-27 14:20:08 +1000  866) 
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/Archer.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/BetaTester.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/Cavalier.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/Duck.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/Ibis.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/Knight.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/listeners/ActionPointListener.java ======
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000  1) package uq.deco2800.duxcom.entities.heros.listeners;
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000  2) 
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000  3) /**
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  4)  * Provides a system for notifying interested classes when the AP of a hero changes.
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  5)  *
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  6)  * Any class which wishes to be notified of changes in the AP of a hero should implement this class and add itself as an
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  7)  * AP listener (generally through the hero manager).
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  8)  *
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  9)  * @author Patrick Doolan on 23/08/2016.
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000 10)  */
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000 13) public interface ActionPointListener {
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 14) 	/**
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 15) 	 * This method is called whenever a hero (being listened to) changes their health.
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 16) 	 *
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 17) 	 * @param newActionPoints      new health of the hero
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 19) 	 */
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000 21) }
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/listeners/HealthListener.java ======
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000  1) package uq.deco2800.duxcom.entities.heros.listeners;
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000  2) 
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000  3) /**
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  4)  * Provides a system for notifying interested classes when the health of a hero changes.
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  5)  *
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  6)  * Any class which wishes to be notified of changes in the health of a hero should implement this class and add itself
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  7)  * as a health listener (generally through the hero manager).
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  8)  *
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000  9)  * @author Patrick Doolan on 23/08/2016.
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000 10)  */
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000 13) public interface HealthListener {
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 14) 	/**
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 15) 	 * This method is called whenever a hero (being listened to) changes their health.
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 16) 	 *
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 17) 	 * @param newHealth      new health of the hero
+7bb3eda9 (Patrick Doolan 2016-09-14 22:13:46 +1000 19) 	 */
+933c775a (Patrick Doolan 2016-08-27 14:20:08 +1000 21) }
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/Priest.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/Rogue.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/entities/heros/Warlock.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/GameManager.java ======
+528febbf (Patrick Doolan                           2016-10-01 00:32:54 +1000  111) 
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  914) 
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  923) 
+94fcb699 (Patrick Doolan                           2016-10-14 16:35:45 +1000 1264) 
+====== duxcom/src/main/java/uq/deco2800/duxcom/GameRenderer.java ======
+ead72f68 (Patrick Doolan                           2016-10-14 11:53:07 +1000 266) 				gameManager.notifyLoadingComplete();
+====== duxcom/src/main/java/uq/deco2800/duxcom/handlers/instructionshandlers/TextInstructionMousePressedHandler.java ======
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000  1) package uq.deco2800.duxcom.handlers.instructionshandlers;
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000  2) 
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000  3) import javafx.scene.input.MouseEvent;
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000  4) import uq.deco2800.duxcom.controllers.instructionscontrollers.TextInstructionController;
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000  5) import uq.deco2800.duxcom.handlers.GameEventHandler;
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000  6) import uq.deco2800.duxcom.instructions.instructionevents.TextInstructionEvent;
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000  7) 
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000  8) 
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000  9) /**
+da55ba51 (Patrick Doolan      2016-10-16 19:34:24 +1000 10)  * Handles mouse click events for a TextInstructionEvent.
+da55ba51 (Patrick Doolan      2016-10-16 19:34:24 +1000 11)  *
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 12)  * Created by Patrick on 12/10/2016.
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 13)  */
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 14) public class TextInstructionMousePressedHandler extends GameEventHandler<MouseEvent> {
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 15) 	private TextInstructionController textInstructionController;
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 16) 	private TextInstructionEvent textInstructionModel;
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 17) 	public TextInstructionMousePressedHandler(TextInstructionController textInstructionController, TextInstructionEvent
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 18) 											  textInstructionModel) {
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 19) 		super(null, textInstructionController.getPane());
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 20) 		this.textInstructionController = textInstructionController;
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 21) 		this.textInstructionModel = textInstructionModel;
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 22) 	}
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 23) 
+da55ba51 (Patrick Doolan      2016-10-16 19:34:24 +1000 24) 	/**
+da55ba51 (Patrick Doolan      2016-10-16 19:34:24 +1000 25) 	 * On mouse click move to the next instruction (this includes destroying the overlay).
+da55ba51 (Patrick Doolan      2016-10-16 19:34:24 +1000 26) 	 *
+da55ba51 (Patrick Doolan      2016-10-16 19:34:24 +1000 27) 	 * @param event Mouse press on the text instruction overlay.
+da55ba51 (Patrick Doolan      2016-10-16 19:34:24 +1000 28) 	 */
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 29) 	@Override
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 31) 		if (textInstructionModel.isAllTextDisplayed()) {
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 32) 			textInstructionController.destroyOverlay();
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 33) 		} else {
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 34) 			textInstructionModel.releaseAllText();
+4c3bc869 (Patrick Doolan      2016-10-20 22:03:36 +1000 35) 		}
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 36) 	}
+2be613ac (Patrick Doolan      2016-10-12 19:57:37 +1000 37) }
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/GameInterface.java ======
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  87) 
+63030955 (Patrick Doolan                           2016-10-19 12:31:17 +1000 116)         gameManager.setLevelInstructions(gameManager.getMap().getLevelInstructions());
+cd9ff659 (Patrick Doolan                           2016-10-16 13:25:06 +1000 164) 
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/GameDisplayManager.java ======
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/GameDisplayManager.java (Patrick Doolan                           2016-10-01 00:32:54 +1000 72) 
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/graphicshandler/EnemyMovementRangeGraphicsHandler.java ======
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/graphicshandler/EntityGraphicsHandler.java ======
+4f72285f duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/graphicshandler/EntityGraphicsHandler.java (Patrick Doolan                           2016-09-05 15:14:01 +1000  12) import uq.deco2800.duxcom.entities.heros.AbstractHero;
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/graphicshandler/MovementRangeGraphicsHandler.java ======
+04550e8f (Patrick Doolan                           2016-09-16 22:49:48 +1000   9)  * Graphics handler for drawing the movement range of the current turn hero onto the screen.
+04550e8f (Patrick Doolan                           2016-09-16 22:49:48 +1000  10)  *
+04550e8f (Patrick Doolan                           2016-09-16 22:49:48 +1000  11)  * @author Hayden Pike on 06/09/2016.
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java ======
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000  20) 	/**
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000  21) 	 * A semi-transparent yellow for highlighting the movement range of the current turn hero.
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000  22) 	 */
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000  23) 	private static final Color MOVEMENT_RANGE_HIGHLIGHT = new Color(1.0, 1.0, 0, 0.5);
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000  24) 
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 188) 	/**
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 189) 	 * Draws a semi-transparent overlay on any of the tiles on the map that the current turn hero can move to.
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 190) 	 *
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 191) 	 * @return true if the movement range was drawn, and false otherwise (the hero's movement range is uninitialised)
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 192) 	 */
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 193) 	private boolean renderMovementRange() {
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 194) 		Float[][] movementRange = map.getCurrentTurnHero().getMovementCost();
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 195) 		// If hero's movement range has not been initialised, draw nothing.
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 196) 		if (movementRange == null) {
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 197) 			return false;
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 198) 		}
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 199) 
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 200) 		// Iterate through the tiles in range.
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 201) 		for (int x = centerX - zoom; x <= centerX + zoom; x++) {
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 202) 			for (int y = centerY - zoom; y <= centerY + zoom; y++) {
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 203) 				// Check that the point is on the map and somewhere the hero can move.
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 206) 				}
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 207) 			}
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 208) 		}
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 209) 		return true;
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 210) 	}
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 211) 
+6637a15e duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/minimap/MiniMap.java (Patrick Doolan                           2016-09-15 12:34:10 +1000 222) 		renderMovementRange();
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java ======
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  2) 
+faa71ef5 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-21 00:06:06 +1000  3) import javafx.application.Platform;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  4) import javafx.scene.control.ProgressBar;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  5) import uq.deco2800.duxcom.entities.heros.listeners.ActionPointListener;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  6) 
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  7) /**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000  8)  * Bar to display current turn hero AP on main UI panel.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000  9)  *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 10)  * @author Patrick Doolan on 23/08/2016.
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 11)  */
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 12) public class ActionPointBar extends ProgressBar implements ActionPointListener {
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 13) 	@Override
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 16) 	}
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 17) 
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 18) 	/**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 19) 	 * Set the fill of the bar to be a proportion equal to the current turn hero's remaining AP.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 20) 	 *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 21) 	 * @param newActionPoints		current/new AP of the current hero
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 23) 	 */
+faa71ef5 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-21 00:06:06 +1000 25) 		Platform.runLater(() -> setProgress((double) newActionPoints/(double) baseActionPoints));
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/ActionPointBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 26) 	}
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/ActionPointBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 27) }
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java ======
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  2) 
+faa71ef5 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-21 00:06:06 +1000  3) import javafx.application.Platform;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  4) import javafx.scene.control.ProgressBar;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  5) import uq.deco2800.duxcom.entities.heros.listeners.HealthListener;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  6) 
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  7) /**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000  8)  * Bar to display current turn hero health on main UI panel.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000  9)  *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 10)  * @author Patrick Doolan on 23/08/2016.
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 11)  */
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 12) public class HealthBar extends ProgressBar implements HealthListener {
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 14) 	@Override
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 17) 	}
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 18) 
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 19) 	/**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 20) 	 * Set the fill of the bar to be a proportion equal to the current turn hero's remaining health.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 21) 	 *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 22) 	 * @param newHealth			current/new health of the current hero
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 24) 	 */
+faa71ef5 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-21 00:06:06 +1000 26) 		Platform.runLater(() -> setProgress(newHealth/baseHealth));
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statusbars/HealthBar.java (Patrick Doolan 2016-09-14 22:13:46 +1000 27) 	}
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statusbars/HealthBar.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 28) }
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java ======
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  2) 
+faa71ef5 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-21 00:06:06 +1000  3) import javafx.application.Platform;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  4) import javafx.scene.control.Label;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  5) import uq.deco2800.duxcom.entities.heros.listeners.ActionPointListener;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  6) 
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  7) /**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000  8)  * Text which sits on the main UI panel and displays the current hero's AP.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000  9)  *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 10)  * @author Patrick Doolan on 23/08/2016.
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 11)  */
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 12) public class ActionPointLabel extends Label implements ActionPointListener {
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 13) 	private static final int MAX_AP_NUMBER_LENGTH = 5;
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 14) 	private static final int TRUNCATION_LENGTH  = MAX_AP_NUMBER_LENGTH - 2;
+e0da5679 duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 23:22:51 +1000 15) 
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 16) 	@Override
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 19) 	}
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 20) 
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 21) 	/**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 22) 	 * Update the text on the label to show the current hero's AP.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 23) 	 *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 24) 	 * @param newActionPoints		new/current AP of the current hero
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 26) 	 */
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 28) 		String newActionPointsText = prepareNumberForScreen(newActionPoints);
+faa71ef5 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-21 00:06:06 +1000 30) 		Platform.runLater(() -> setText(newActionPointsText+ "/" + baseActionPointsText));
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 31) 	}
+e0da5679 duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 23:22:51 +1000 32) 
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 33) 	/**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 34) 	 * There is limited room on screen for numbers in the AP label, so truncate any number which is too long.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 35) 	 *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 36) 	 * @param statusNumber a number related to the current hero's AP
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 37) 	 * @return text of statusNumber unchanged or a truncated version.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 38) 	 */
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 39) 	private String prepareNumberForScreen(int statusNumber) {
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 40) 		String numberText = (new Integer(statusNumber)).toString();
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 41) 		if (numberText.length() > MAX_AP_NUMBER_LENGTH) {
+dd857655 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-17 16:45:19 +1000 42) 			// Large number. Truncate it.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 43) 			numberText = numberText.substring(0, TRUNCATION_LENGTH) + "...";
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 44) 		}
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 45) 		return numberText;
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/ActionPointLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 46) 	}
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/ActionPointLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 47) }
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java ======
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  2) 
+faa71ef5 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-21 00:06:06 +1000  5) import javafx.application.Platform;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  6) import javafx.scene.control.Label;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  7) import uq.deco2800.duxcom.entities.heros.listeners.HealthListener;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  8) 
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000  9) /**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 10)  * Text which sits on the main UI panel and displays the current hero's health.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 11)  *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 12)  * @author Patrick Doolan on 23/08/2016.
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 13)  */
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 14) public class HealthLabel extends Label implements HealthListener {
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 15) 	private static final int MAX_WHOLE_NUMBER_LENGTH = 5;
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 16) 	private static final int TRAIL_OFF_LENGTH = 3;
+e0da5679 duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 23:22:51 +1000 17) 
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 18) 	@Override
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 21) 	}
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 22) 
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 23) 	/**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 24) 	 * Update the text on the label to show the current hero's AP.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 25) 	 *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 26) 	 * @param health			new/current health of the current hero
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 28) 	 */
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 30) 		String healthText = prepareNumberForScreen(health);
+faa71ef5 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-21 00:06:06 +1000 32) 		Platform.runLater(() -> setText(healthText + "/" + baseHealthText));
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 33) 	}
+e0da5679 duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 23:22:51 +1000 34) 
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 35) 	/**
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 36) 	 * There is limited room on screen for numbers in the health label, so truncate any number which is too long.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 37) 	 *
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 38) 	 * @param statusNumber a number related to the current hero's health
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 39) 	 * @return text of statusNumber unchanged or a truncated version.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 40) 	 */
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 41) 	private String prepareNumberForScreen(double statusNumber) {
+dd857655 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-17 16:45:19 +1000 42) 		// Health text display will have at most one figure after the decimal point.
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 43) 		DecimalFormat notScientificNotation = new DecimalFormat("#.#");
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 44) 		String numberText = notScientificNotation.format(statusNumber);
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 45) 		if (numberText.length() > MAX_WHOLE_NUMBER_LENGTH) {
+dd857655 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-17 16:45:19 +1000 46) 			// Large number. Truncate it.
+dd857655 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-17 16:45:19 +1000 47) 			numberText = numberText.substring(0, TRAIL_OFF_LENGTH) + "...";
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 48) 		}
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 49) 		return numberText;
+7bb3eda9 duxcom/src/main/java/uq/deco2800/duxcom/interfaces/gameinterface/statuslabels/HealthLabel.java (Patrick Doolan 2016-09-14 22:13:46 +1000 50) 	}
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/gameinterface/statuslabels/HealthLabel.java            (Patrick Doolan 2016-08-27 14:20:08 +1000 51) }
+====== duxcom/src/main/java/uq/deco2800/duxcom/interfaces/overlaymaker/OverlayMakerHandler.java ======
+d9d2a9fb (Patrick Doolan 2016-10-22 17:08:01 +1000   6) import javafx.scene.input.InputEvent;
+d9d2a9fb (Patrick Doolan 2016-10-22 17:08:01 +1000 231)         EventHandler noEvent = new EventHandler<InputEvent>() {
+d9d2a9fb (Patrick Doolan 2016-10-22 17:08:01 +1000 233)             public void handle(InputEvent e) {
+====== duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java ======
+63030955 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-19 12:31:17 +1000  21) import uq.deco2800.duxcom.instructions.LevelInstructions;
+63030955 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-19 12:31:17 +1000  50)     protected LevelInstructions levelInstructions = new LevelInstructions();
+63030955 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-19 12:31:17 +1000  57) 
+63030955 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-19 12:31:17 +1000  58) 
+101577e7 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-11 14:35:39 +1000 413)     }
+101577e7 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-11 14:35:39 +1000 414) 
+101577e7 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-11 14:35:39 +1000 436)     }
+101577e7 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-11 14:35:39 +1000 437) 
+1feb01da duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-13 19:08:33 +1000 552) 
+63030955 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-19 12:31:17 +1000 553)     public LevelInstructions getLevelInstructions() {
+63030955 duxcom/src/main/java/uq/deco2800/duxcom/maps/AbstractGameMap.java (Patrick Doolan                           2016-10-19 12:31:17 +1000 554)         return levelInstructions;
+====== duxcom/src/main/java/uq/deco2800/duxcom/maps/mapgen/MapAssembly.java ======
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000   17) import uq.deco2800.duxcom.entities.heros.listeners.ActionPointListener;
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000   18) import uq.deco2800.duxcom.entities.heros.listeners.HealthListener;
+63030955 duxcom/src/main/java/uq/deco2800/duxcom/maps/mapgen/MapAssembly.java (Patrick Doolan                           2016-10-19 12:31:17 +1000   21) import uq.deco2800.duxcom.instructions.LevelInstructions;
+528febbf duxcom/src/main/java/uq/deco2800/duxcom/maps/mapgen/MapAssembly.java (Patrick Doolan                           2016-10-01 00:32:54 +1000  104) 
+63030955 duxcom/src/main/java/uq/deco2800/duxcom/maps/mapgen/MapAssembly.java (Patrick Doolan                           2016-10-19 12:31:17 +1000  219)         levelInstructions = mapToCopy.getLevelInstructions();
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000  228)     public void addHealthListenerAllHeroes(HealthListener healthListener) {
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000  229)         heroManager.addHealthListenerAllHeroes(healthListener);
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000  230)     }
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000  231) 
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000  238)     public void addActionPointListenerAllHeroes(ActionPointListener actionPointListener) {
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000  239)         heroManager.addActionPointListenerAllHeroes(actionPointListener);
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000  240)     }
+933c775a duxcom/src/main/java/uq/deco2800/duxcom/mapgen/MapAssembly.java      (Patrick Doolan                           2016-08-27 14:20:08 +1000  241) 
+b5d911b8 duxcom/src/main/java/uq/deco2800/duxcom/maps/mapgen/MapAssembly.java (Patrick Doolan                           2016-09-08 18:43:27 +1000  641) 
+adab7191 duxcom/src/main/java/uq/deco2800/duxcom/maps/mapgen/MapAssembly.java (Patrick Doolan                           2016-09-08 21:17:02 +1000  662) 
+adab7191 duxcom/src/main/java/uq/deco2800/duxcom/maps/mapgen/MapAssembly.java (Patrick Doolan                           2016-09-08 21:17:02 +1000  681) 
+====== duxcom/src/main/java/uq/deco2800/duxcom/maps/TestMovementRangeMap.java ======
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000  9)  * A map used for tests of the movement range calculations performed in MapAssembly.
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 15) 
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 17) 	 * Create a new map for the tests.
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 18) 	 *
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 19) 	 * This map contains two ducks and no other obstacles.
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 21) 	 * @param name name of the map (not used)
+====== duxcom/src/main/java/uq/deco2800/duxcom/overworld/LevelRegister.java ======
+c397eed7 (Patrick Doolan 2016-10-20 12:10:11 +1000  91) 			interfaceManager.loadSegmentImmediate(InterfaceSegmentType.GAME, stage, level.getLevelId());
+====== duxcom/src/main/resources/ui/fxml/duXCOM.fxml ======
+====== duxcom/src/main/resources/ui/fxml/instructions/ContinuePrompt.fxml ======
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000  1) <?xml version="1.0" encoding="UTF-8"?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000  2) 
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000  3) <?import javafx.scene.control.Button?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000  4) <?import javafx.scene.layout.AnchorPane?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000  5) <?import javafx.scene.layout.Pane?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000  6) <?import javafx.scene.shape.Rectangle?>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000  7) <?import javafx.scene.text.Font?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000  8) <?import javafx.scene.text.Text?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000  9) 
+680fed5f duxcom/src/main/resources/ui/fxml/instructions/ContinuePrompt.fxml (Patrick Doolan 2016-10-16 12:37:24 +1000 10) <AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0" prefWidth="393.0" stylesheets="/ui/css/instructions.css" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.instructionscontrollers.ContinuePromptController">
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000 11)    <children>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 12)       <Pane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="367.0">
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000 13)          <children>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 14)             <Rectangle arcHeight="5.0" arcWidth="5.0" height="145.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="365.0" />
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 15)                <Text fill="WHITE" layoutX="32.0" layoutY="45.0" text="Repeat instruction?">
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 16)                <font>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 17)                   <Font size="20.0" />
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 18)                </font></Text>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 19)                <Button fx:id="continueButton" layoutX="32.0" layoutY="75.0" mnemonicParsing="false" onAction="#onContinueSelected" prefHeight="50" prefWidth="100" styleClass="buttons" text="Got it!">
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 20)                <font>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 21)                   <Font size="20.0" />
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 22)                </font></Button>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 23)                <Button fx:id="replayButton" layoutX="164.0" layoutY="75.0" mnemonicParsing="false" onAction="#onReplaySelected" prefHeight="50" prefWidth="180" styleClass="buttons" text="Show me again.">
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 24)                <font>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 25)                   <Font size="20.0" />
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 20:57:09 +1000 26)                </font></Button>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000 27)          </children>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000 28)       </Pane>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000 29)    </children>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml              (Patrick Doolan 2016-10-02 01:48:34 +1000 30) </AnchorPane>
+====== duxcom/src/main/resources/ui/fxml/instructions/TextInstruction.fxml ======
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000  1) <?xml version="1.0" encoding="UTF-8"?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000  2) 
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000  3) <?import javafx.scene.layout.AnchorPane?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000  4) <?import javafx.scene.layout.Pane?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000  5) <?import javafx.scene.shape.Rectangle?>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 20:57:09 +1000  6) <?import javafx.scene.text.Font?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000  7) <?import javafx.scene.text.Text?>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000  8) 
+680fed5f duxcom/src/main/resources/ui/fxml/instructions/TextInstruction.fxml (Patrick Doolan 2016-10-16 12:37:24 +1000  9) <AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0" prefWidth="393.0" stylesheets="/ui/css/instructions.css" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.instructionscontrollers.TextInstructionController">
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000 10)    <children>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 20:57:09 +1000 11)       <Pane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="367.0">
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000 12)          <children>
+e0d0394e duxcom/src/main/resources/ui/fxml/instructions/TextInstruction.fxml (Patrick Doolan 2016-10-15 16:14:40 +1000 13)             <Rectangle fx:id="innerOverlay" arcHeight="5.0" arcWidth="5.0" height="145.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="365.0" />
+1ccd633a duxcom/src/main/resources/ui/fxml/instructions/TextInstruction.fxml (Patrick Doolan 2016-10-15 15:03:18 +1000 14)                <Text fx:id="instructionTextField" fill="WHITE" layoutX="14.0" layoutY="36.0" text="This is what I start with">
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 20:57:09 +1000 15)                <font>
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 20:57:09 +1000 16)                   <Font size="20.0" />
+4506cf10 duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 20:57:09 +1000 17)                </font></Text>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000 18)          </children>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000 19)       </Pane>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000 20)    </children>
+3c1e181a duxcom/src/main/resources/ui/fxml/continuePrompt.fxml               (Patrick Doolan 2016-10-02 01:48:34 +1000 21) </AnchorPane>
+====== duxcom/src/test/java/uq/deco2800/duxcom/entities/HeroManagerTest.java ======
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000  1) package uq.deco2800.duxcom.entities;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000  2) 
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000  3) import org.junit.Before;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000  4) import org.junit.Test;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000  5) import uq.deco2800.duxcom.entities.heros.Duck;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000  7) import uq.deco2800.duxcom.entities.heros.Ibis;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000  8) 
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000  9) import static org.junit.Assert.assertEquals;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 10) import static org.junit.Assert.assertTrue;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 11) 
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 12) /**
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 13)  * Some basic tests for the hero manager class.
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 14)  *
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 15)  * Aims to cover exceptional branches, such as null current hero etc.
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 16)  *
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 17)  * @author Patrick Doolan on 17/09/2016.
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 18)  */
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 19) public class HeroManagerTest {
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 20) 	private HeroManager heroManager;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 21) 	private Ibis ibis;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 22) 	private Duck firstHero;
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 23) 
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 24) 	@Before
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 25) 	public void setUpHeroManager() {
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 26) 		heroManager = new HeroManager();
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 27) 		firstHero = new Duck(1, 2);
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 28) 		heroManager.addHero(firstHero);
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 29) 		ibis = new Ibis(3, 4);
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 30) 		heroManager.addHero(ibis);
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 31) 		heroManager.addHero(new Duck(5, 6));
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 32) 	}
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 33) 
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 34) 	/**
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 35) 	 * Ensure that if current hero is not set, initialisation-type calls do not throw exceptions (do nothing).
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 36) 	 */
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 37) 	@Test
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 38) 	public void testCurrentHeroNotSet() {
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 39) 		// current hero null currently, but calls below should not cause exceptions.
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 40) 		heroManager.initialiseStatusListeners();
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 41) 		heroManager.nextHero();
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 42) 
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 43) 		assertEquals(heroManager.getCurrentHero(), ibis);
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 44) 	}
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 45) 
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 46) 	/**
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 47) 	 * Check that when the last hero has had their turn, it becomes the first hero's turn again.
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 48) 	 */
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 49) 	@Test
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 50) 	public void testCurrentHeroWrapAround() {
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 51) 		heroManager.setHero(0);
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 52) 		heroManager.nextHero();
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 53) 		heroManager.nextHero();
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 54) 		assertTrue("Hero turns do not wrap around correctly", heroManager.getNextHero() == firstHero);
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 55) 		heroManager.nextHero();
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 56) 		assertTrue("Hero turns do not wrap around correctly", heroManager.getCurrentHero() == firstHero);
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 57) 	}
+13c20560 (Patrick Doolan 2016-09-17 22:15:14 +1000 58) }
+====== duxcom/src/test/java/uq/deco2800/duxcom/entities/heros/listeners/StatusListenersTest.java ======
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000   1) package uq.deco2800.duxcom.entities.heros.listeners;
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000   2) 
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000   3) import javafx.fxml.FXMLLoader;
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000   4) import javafx.scene.Parent;
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000   5) import javafx.scene.Scene;
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000   6) import javafx.stage.Stage;
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000   7) import org.junit.Before;
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000   9) import org.junit.Test;
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  11) import uq.deco2800.duxcom.entities.heros.AbstractHero;
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000  12) import uq.deco2800.duxcom.entities.heros.BetaTester;
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  13) import uq.deco2800.duxcom.entities.heros.Duck;
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  14) import uq.deco2800.duxcom.entities.heros.Ibis;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  15) import uq.deco2800.duxcom.interfaces.gameinterface.statusbars.ActionPointBar;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  16) import uq.deco2800.duxcom.interfaces.gameinterface.statusbars.HealthBar;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  17) import uq.deco2800.duxcom.interfaces.gameinterface.statuslabels.ActionPointLabel;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  18) import uq.deco2800.duxcom.interfaces.gameinterface.statuslabels.HealthLabel;
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  19) import static org.loadui.testfx.GuiTest.find;
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  20) import org.testfx.framework.junit.ApplicationTest;
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  21) 
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  22) import java.net.URL;
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  23) 
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  24) import static org.junit.Assert.assertTrue;
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000  25) import static uq.deco2800.duxcom.controllers.DuxComControllerTest.waitForRunLater;
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  27) 
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  28) 
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  29) /**
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000  30)  * Tests which check i) the correctness of the health and AP listener systems and ii) that the health and AP bars (and
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000  31)  * accompanying text) are being correctly updated.
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000  32)  *
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000  33)  * @author Patrick Doolan on 26/08/2016.
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  34)  */
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  36) public class StatusListenersTest extends ApplicationTest {
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000  37) 
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  38) 	private HeroManager heroManager;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  39) 	private AbstractHero currentHero;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  40) 	private Ibis ibis;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  41) 	private HealthBar healthBar;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  42) 	private ActionPointBar actionPointBar;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  43) 	private HealthLabel healthLabel;
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  44) 	private ActionPointLabel actionPointLabel;
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000  46) 	private static final int BETA_TESTER_TURN = 3;
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000  47) 	private static final int LONG_DISPLAY_HEALTH = 123456;
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  48) 
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  49) 	// Code reused from DuxComControllerTest
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  50) 	@Override
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  51) 	public void start(Stage stage) throws Exception {
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  52) 
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  54) 		FXMLLoader fxmlLoader = new FXMLLoader();
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  55) 		fxmlLoader.setLocation(location);
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  56) 
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  57) 		Parent root = fxmlLoader.load(location.openStream());
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  59) 
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  60) 		Scene scene = new Scene(root);
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  61) 		stage.setScene(scene);
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  62) 		stage.show();
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  63) 
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  64) 	}
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  65) 
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  66) 
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  67) 	@Before
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000  68) 	public void setUpListeners() throws InterruptedException {
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  69) 		//Add a list of heroes to the GameManager
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  70) 		heroManager = new HeroManager();
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  71) 
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  72) 		//dummy values for positions - irrelevant to tests
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  73) 		ibis = new Ibis(3, 4);
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  74) 
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  75) 		heroManager.addHero(new Duck(1, 2));
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  76) 		heroManager.addHero(ibis);
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  77) 		heroManager.addHero(new Duck(6, 7));
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000  78) 		heroManager.addHero(new BetaTester(8, 9));
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  79) 
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  80) 		healthBar = find("#healthBar");
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  81) 		healthLabel = find("#healthLabel");
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  82) 		actionPointBar = find("#actionPointBar");
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  83) 		actionPointLabel = find("#actionPointLabel");
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  84) 
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  85) 		//Add listeners (status and AP bars) to the heroes
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  86) 		heroManager.addHealthListenerAllHeroes(healthBar);
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  87) 		heroManager.addHealthListenerAllHeroes(healthLabel);
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  88) 		heroManager.addActionPointListenerAllHeroes(actionPointBar);
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  89) 		heroManager.addActionPointListenerAllHeroes(actionPointLabel);
+75b5e7ff (Patrick Doolan                           2016-09-17 12:09:15 +1000  90) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000  91) 		heroManager.setHero(0);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000  92) 		heroManager.initialiseStatusListeners();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000  93) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000  94) 		currentHero = heroManager.getCurrentHero();
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  95) 	}
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000  96) 
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000  97) 	/**
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000  98) 	 * Test that changing the health of the current hero causes both the health bar and health text on the main panel
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000  99) 	 * to update.
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 100) 	 */
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 101) 	@Test
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 102) 	public void testCurrentHeroHealthChanges() throws InterruptedException {
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 103) 		// Change health of current hero and check appropriate reflection in the listeners.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 104) 		assertTrue("Current hero is null", currentHero != null);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 105) 		currentHero.changeHealth(-5);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 106) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 107) 		
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 108) 		// Check that the health listener has been updated.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 109) 		assertTrue("Did not update health bar on hero health change.", healthBar.getProgress() ==
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 110) 				currentHero.getRatioHealthRemaining());
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 111) 		assertTrue("Did not update health text on hero health change.",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 112) 				((int) currentHero.getHealth()+ "/" + (int) currentHero.getBaseHealth())
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 113) 						.equals(healthLabel.getText()));
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 114) 	}
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 115) 
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 116) 	/**
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 117) 	 * Test that changes to the health of a hero who is not the current hero do not affect the health bar and health
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 118) 	 * text on the main panel.
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 119) 	 */
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 120) 	@Test
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 121) 	public void testNotCurrentHeroHealthChanges() throws InterruptedException {
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 122) 		// Change to update listener
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 123) 		currentHero.changeHealth(-5);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 124) 		//Should do nothing - ibis is not the current hero.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 125) 		assertTrue("Test requires non-current hero. Implementation of turns may have changed.",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 126) 				ibis != currentHero);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 127) 		ibis.changeHealth(-3);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 128) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 129) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 130) 		assertTrue("Health of non-current turn hero changed main Health Bar display", healthBar.getProgress() ==
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 131) 				currentHero.getRatioHealthRemaining());
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 132) 		assertTrue("Health of non-current turn hero changed main Health text display",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 133) 				((int) currentHero.getHealth() + "/" + (int) currentHero.getBaseHealth())
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 134) 						.equals(healthLabel.getText()));
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 135) 	}
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 136) 
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 137) 	/**
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 138) 	 * Test that when the turn ends, the changes to the new hero's health are shown on the main health bar and health
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 139) 	 * text.
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 140) 	 */
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 141) 	@Test
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 142) 	public void testHealthChangeForNextHero() throws InterruptedException {
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 143) 		heroManager.nextHero();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 144) 		currentHero = heroManager.getCurrentHero();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 145) 		currentHero.changeHealth(-2);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 146) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 147) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 148) 		assertTrue("Health bar did not correctly update for new hero", healthBar.getProgress() ==
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 149) 				currentHero.getRatioHealthRemaining());
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 150) 		assertTrue("Health text did not correctly update for new hero",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 151) 				((int) currentHero.getHealth() + "/" + (int) currentHero.getBaseHealth())
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 152) 						.equals(healthLabel.getText()));
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 153) 	}
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 154) 
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 155) 	/**
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 156) 	 * Test that the health text on the main UI panel properly displays health when it is too large.
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 157) 	 */
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 158) 	@Test
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 159) 	public void testLongHealthText() throws InterruptedException {
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 160) 		heroManager.setHero(BETA_TESTER_TURN);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 161) 		currentHero = heroManager.getCurrentHero();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 162) 		// Manually set the hero health for the purposes of testing.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 163) 		currentHero.setHealth(LONG_DISPLAY_HEALTH);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 164) 		// Check that the health has been set.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 165) 		assertTrue("Could not manually set health as required for test",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 166) 				currentHero.getHealth() == LONG_DISPLAY_HEALTH);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 167) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 168) 		// Set health doesn't notify listeners (only changeHealth does) so notify them manually
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 169) 		currentHero.enableListeners();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 170) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 171) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 172) 		assertTrue("Did not display large health correctly.", "123.../100".equals(healthLabel.getText()));
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 173) 	}
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 174) 
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 175) 	/**
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 176) 	 * Test that changing the AP of the current hero causes both the AP bar and AP text on the main panel to update.
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 177) 	 */
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 178) 	@Test
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 179) 	public void testCurrentHeroAPChanges() throws InterruptedException {
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 180) 		// Change AP of current hero and check appropriate reflection in the listeners.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 181) 		assertTrue("Current hero is null", currentHero != null);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 182) 		currentHero.changeAP(-5);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 183) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 184) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 185) 		// Check that the AP listeners have been updated.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 186) 		assertTrue("Did not update AP bar on hero AP change.", actionPointBar.getProgress() ==
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 187) 				((double) currentHero.getActionPoints()) / (double) currentHero.getBaseActionPoints());
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 188) 		assertTrue("Did not update AP label on hero AP change.",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 189) 				(currentHero.getActionPoints() + "/" + currentHero.getBaseActionPoints())
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 190) 						.equals(actionPointLabel.getText()));
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 191) 	}
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 192) 
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 193) 	/**
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 194) 	 * Test that changes to the AP of a hero who is not the current hero do not affect the AP bar and AP text on the
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 195) 	 * main panel.
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 196) 	 */
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 197) 	@Test
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 198) 	public void testNotCurrentHeroAPChanges() throws InterruptedException {
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 199) 		// Change to update listener
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 200) 		currentHero.changeAP(-5);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 201) 		// Should do nothing - ibis is not the current hero.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 202) 		assertTrue("Test requires non-current hero. Implementation of turns may have changed.",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 203) 				ibis != currentHero);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 204) 		ibis.changeAP(-3);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 205) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 206) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 207) 		assertTrue("AP of non-current turn hero changed main AP bar display", actionPointBar.getProgress() ==
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 208) 				((double) currentHero.getActionPoints()) / (double) currentHero.getBaseActionPoints());
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 209) 		assertTrue("AP of non-current turn hero changed main AP text display.",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 210) 				(currentHero.getActionPoints() + "/" + currentHero.getBaseActionPoints())
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 211) 						.equals(actionPointLabel.getText()));
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 212) 	}
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 213) 
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 214) 	/**
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 215) 	 * Test that when the turn ends, the changes to the new hero's AP are shown on the main AP bar and AP text.
+49d8ae3b (Patrick Doolan                           2016-09-16 22:16:00 +1000 216) 	 */
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 217) 	@Test
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 218) 	public void testAPChangeForNextHero() throws InterruptedException {
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 219) 		heroManager.nextHero();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 220) 		currentHero = heroManager.getCurrentHero();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 221) 		// Change AP of the new hero and check that the UI is showing this correctly.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 222) 		currentHero.changeAP(-2);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 223) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 224) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 225) 		assertTrue("AP bar did not update correctly after a turn", actionPointBar.getProgress() ==
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 226) 				((double) currentHero.getActionPoints()) / (double) currentHero.getBaseActionPoints());
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 227) 		assertTrue("AP text did not update correctly after a turn",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 228) 				(currentHero.getActionPoints() + "/" + currentHero.getBaseActionPoints())
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 229) 						.equals(actionPointLabel.getText()));
+1386473d (Patrick Doolan                           2016-09-16 14:38:18 +1000 230) 	}
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 231) 
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 232) 	/**
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 233) 	 * Test that the AP text on the main UI panel properly displays health when it is too large.
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 234) 	 */
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 235) 	@Test
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 236) 	public void testLongActionPointText() throws InterruptedException {
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 237) 		heroManager.setHero(BETA_TESTER_TURN);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 238) 		currentHero = heroManager.getCurrentHero();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 239) 		waitForRunLater();
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 240) 
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 241) 		// Check that the beta testing ibis has the expected amount of AP.
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 242) 		assertTrue("Beta Tester AP has changed - expected Integer.MAX",
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 243) 				currentHero.getActionPoints() == Integer.MAX_VALUE);
+faa71ef5 (Patrick Doolan                           2016-09-21 00:06:06 +1000 244) 		assertTrue("Long AP text displayed incorrectly", "214.../214...".equals(actionPointLabel.getText()));
+dd857655 (Patrick Doolan                           2016-09-17 16:45:19 +1000 245) 	}
+933c775a (Patrick Doolan                           2016-08-27 14:20:08 +1000 246) }
+====== duxcom/src/test/java/uq/deco2800/duxcom/maps/mapgen/MapAssemblyTest.java ======
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 260) 	/**
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 261) 	 * Ensure that when the current turn hero's AP changes that they are given an new, non-null array of movement
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 262) 	 * costs.
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 263) 	 */
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 264) 	@Test
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 265) 	public void testNotNullMovementRangeOnActionPointChange() {
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 267) 		mapAssembly.onActionPointChange(0, 100);
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 268) 		assertNotNull(mapAssembly.getCurrentTurnHero().getMovementCost());
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 269) 
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 270) 		DemoMap demoMap = new DemoMap("test");
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 271) 		mapAssembly = new MapAssembly(demoMap);
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 272) 		mapAssembly.onActionPointChange(0, 100);
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 273) 		assertNotNull(mapAssembly.getCurrentTurnHero().getMovementCost());
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 274) 	}
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 275) 
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 276) 	/**
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 277) 	 * Tests movement range calculations on a designated test map.
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 278) 	 *
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 279) 	 * Test map contains only two ducks and normal (no movement modifier) tiles.
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 280) 	 */
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 281) 	@Test
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 283) 	public void testMovementRangeOnActionChange() {
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 284) 		mapAssembly = new MapAssembly(new TestMovementRangeMap("test"));
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 288) 		mapAssembly.onActionPointChange(mapAssembly.getCurrentTurnHero().getActionPoints(),
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 289) 				mapAssembly.getCurrentTurnHero().getBaseActionPoints());
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 290) 
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 292) 		Float[][] expectedRange = new Float[mapAssembly.getWidth()][mapAssembly.getHeight()];
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 293) 		for (int i = 0; i < expectedRange.length; i++) {
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 294) 			for (int j = 0; j < expectedRange[0].length; j++) {
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 297) 				if (cost <= mapAssembly.getCurrentTurnHero().getActionPoints()) {
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 298) 					expectedRange[i][j] = cost;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 299) 				}
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 300) 			}
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 301) 		}
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 303) 		expectedRange[10][8] = 0.0f;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 304) 		expectedRange[10][9] = null;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 305) 		expectedRange[10][10] = 4.0f;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 306) 		expectedRange[10][11] = 5.0f;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 307) 		expectedRange[10][12] = 6.0f;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 308) 		expectedRange[10][13] = 7.0f;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 309) 		expectedRange[10][14] = null;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 310) 		expectedRange[10][15] = null;
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 312) 		assertArrayEquals(expectedRange, mapAssembly.getCurrentTurnHero().getMovementCost());
+394c2945 (Patrick Doolan                           2016-09-16 22:34:27 +1000 432) 	}
+====== duxcom/src/test/java/uq/deco2800/duxcom/overworld/OverworldControllerTest.java ======
+1658ac96 (Patrick Doolan                           2016-10-22 19:51:58 +1000  55) 	@Ignore
+1658ac96 (Patrick Doolan                           2016-10-22 19:51:58 +1000  79) 	@Ignore
+1658ac96 (Patrick Doolan                           2016-10-22 19:51:58 +1000 107) 	@Ignore
+1658ac96 (Patrick Doolan                           2016-10-22 19:51:58 +1000 134) 	@Ignore
+1658ac96 (Patrick Doolan                           2016-10-22 19:51:58 +1000 161) 	@Ignore
+1658ac96 (Patrick Doolan                           2016-10-22 19:51:58 +1000 188) 	@Ignore
+1658ac96 (Patrick Doolan                           2016-10-22 19:51:58 +1000 302) 	@Ignore
+1658ac96 (Patrick Doolan                           2016-10-22 19:51:58 +1000 349) 	@Ignore
+====== duxcom/wiki_resources/heroes/health_and_AP_listeners_class_diagram.png ======
+Binary file (standard input) matches
+====== duxcom/wiki_resources/heroes/listeners_wiki_picture.png ======
+Binary file (standard input) matches
+====== duxcom/wiki_resources/heroes/movement_calcs_class_diagram.png ======
+Binary file (standard input) matches
+====== duxcom/wiki_resources/heroes/movement_range_wiki_picture.png ======
+Binary file (standard input) matches

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0" prefWidth="393.0" stylesheets="/ui/css/instructions.css" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.instructionscontrollers.ContinuePromptController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="367.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="145.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="365.0" />
+               <Text fill="WHITE" layoutX="32.0" layoutY="45.0" text="Repeat instruction?">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+               <Button fx:id="continueButton" layoutX="32.0" layoutY="75.0" mnemonicParsing="false" onAction="#onContinueSelected" prefHeight="50" prefWidth="100" styleClass="buttons" text="Got it!">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+               <Button fx:id="replayButton" layoutX="164.0" layoutY="75.0" mnemonicParsing="false" onAction="#onReplaySelected" prefHeight="50" prefWidth="180" styleClass="buttons" text="Show me again.">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

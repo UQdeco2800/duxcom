@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="318.0" maxWidth="300.0" minHeight="318.0" minWidth="300.0" prefHeight="318.0" prefWidth="300.0" style="-fx-background-color: #303030;" stylesheets="@../../css/abilities.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.interfaces.gameinterface.heropopup.controllers.AbilitiesUIController">
+    <children>
+        <VBox alignment="CENTER" layoutX="14.0" layoutY="16.0" prefHeight="287.0" prefWidth="100.0">
+            <children>
+                <Label text="Speed" />
+                <Button id="ap_1" fx:id="ap_1" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="ap" text=" +1">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="ap_2" fx:id="ap_2" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="ap" text=" +1">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="ap_3" fx:id="ap_3" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="ap" text=" +1">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="ap_4" fx:id="ap_4" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="ap" text=" +1">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="ap_5" fx:id="ap_5" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="ap" text=" +1">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="186.0" layoutY="16.0" prefHeight="287.0" prefWidth="100.0">
+            <children>
+                <Label text="Health" />
+                <Button id="health_1" fx:id="health_1" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="health" text="+9">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="health_2" fx:id="health_2" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="health" text="+9">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="health_3" fx:id="health_3" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="health" text="+9">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="health_4" fx:id="health_4" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="health" text="+9">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="health_5" fx:id="health_5" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="health" text="+9">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="100.0" layoutY="16.0" prefHeight="287.0" prefWidth="100.0">
+            <children>
+                <Label text="Armour" />
+                <Button id="armour_1" fx:id="armour_1" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="armour" text="+2">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="armour_2" fx:id="armour_2" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="armour" text="+2">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="armour_3" fx:id="armour_3" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="armour" text="+2">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="armour_4" fx:id="armour_4" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="armour" text="+2">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="armour_5" fx:id="armour_5" mnemonicParsing="false" onAction="#addSelected" prefHeight="30.0" prefWidth="30.0" styleClass="armour" text="+2">
+                    <VBox.margin>
+                        <Insets top="22.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+      <Label layoutX="169.0" layoutY="6.0" styleClass="upgrade-points" text="Upgrade Points :" />
+      <Label id="upgrade-points" fx:id="upgradePoints" layoutX="266.0" layoutY="6.0" styleClass="upgrade-points" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+{
+	"sword": {
+		"item": {
+			"stackSize": 2,
+			"cost": 45,
+    		"weight": 3
+		}
+	}
+}

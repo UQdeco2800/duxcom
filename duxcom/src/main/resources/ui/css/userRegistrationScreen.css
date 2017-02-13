@@ -1,0 +1,127 @@
+/*
+* User Registration Screen StyleSheet
+*/
+
+/* Main Pane */
+#background-pane{
+    -fx-pref-height: 720.0;
+    -fx-pref-width: 1280.0;
+    -fx-alignment: center;
+}
+
+/* Background Pane */
+#background-image{
+    -fx-pref-height: 720.0;
+    -fx-pref-width: 1280.0;
+    -fx-alignment: center;
+	-fx-background-image: url("/ui/duxcom-background.png");
+    -fx-background-size: 1280.0 720.0;
+}
+
+/* Right Pane */
+#right-pane{
+    -fx-pref-height: 800.0;
+    -fx-pref-width: 395.0;
+}
+
+/* New User Title */
+#title{
+    -fx-text-fill: white;
+    -fx-font: 20.0 Arial;
+    -fx-padding: 20.0 0.0 10.0 0.0;
+}
+
+/* Separator */
+.separator{
+    -fx-pref-width: 250.0;
+    -fx-padding: 0.0 0.0 10.0 0.0;
+}
+
+/* Separator Stroke */
+.separator:horizontal .line {
+    -fx-border-color: radial-gradient(radius 100%, rgba(153,122,80,0.5), #d0d0d0, rgba(153,122,80,0.5));
+}
+
+/* VBox containing all interactive elements of the screen */
+#contents-box{
+    -fx-pref-height: 700.0;
+	-fx-alignment: center;
+}
+
+/* VBox containing input fields, labels and buttons */
+#interact-box{
+	-fx-alignment: center;
+    -fx-pref-width: 340.0;
+    -fx-pref-height: 500.0;
+	-fx-background-image: url("/ui/borders/User-Registration.png");
+    -fx-background-size: 340.0 500.0;
+    -fx-background-position: bottom;
+}
+
+/* Labels above each input field */
+.input-labels{
+    -fx-pref-height: 10.0;
+    -fx-pref-width: 250.0;
+    -fx-font: 13.0 Arial;
+    -fx-text-fill: white;
+    -fx-padding: 5.0 0.0 2.0 0.0;
+}
+
+/* User input fields */
+.input-textfields, .input-passwordfields{
+    -fx-pref-height: 25.0;
+    -fx-pref-width: 250.0;
+    -fx-font: 12.0 Arial;
+    -fx-text-fill: black;
+    -fx-padding: 5.0 5.0 5.0 5.0;
+    -fx-background-color: rgba(255,255,255,0.8);
+}
+
+/* User input buttons */
+.input-buttons{
+    -fx-pref-height: 20.0;
+    -fx-pref-width: 130.0;
+    -fx-max-height: 18.0;
+    -fx-max-width: 200.0;
+    -fx-font: 11.0 Arial;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+/* When mouse hover's over buttons */
+.input-buttons:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+/* Back to Login button */
+#back-button{
+	-fx-pref-width: 165.0;
+}
+
+/* Register button */
+#register-button{
+	-fx-pref-width: 110.0;
+}
+
+/* Error label */
+#error-label{
+    -fx-alignment: bottom-center;
+    -fx-pref-height: 17.0;
+    -fx-pref-width: 300.0;
+    -fx-font-size: 11.0;
+    -fx-text-fill: white;
+    -fx-padding: 10.0 5.0 20.0 5.0;
+}

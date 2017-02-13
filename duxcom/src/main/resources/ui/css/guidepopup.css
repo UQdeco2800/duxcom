@@ -1,0 +1,47 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: rgba(0, 0, 0, 1);
+    -fx-cursor: move;
+}
+
+#quitBtn {
+    -fx-border-radius: 50;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-cursor: hand;
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: rgba(0, 0, 0, 1);
+    -fx-border-width:0;
+}
+
+.text-area:disabled {
+    -fx-text-fill:white;
+    -fx-opacity:1;
+    -fx-background-color: rgba(0, 0, 0, 1);
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: rgba(0, 0, 0, 1);
+    -fx-opacity:1;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+    
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+    
+    
+}

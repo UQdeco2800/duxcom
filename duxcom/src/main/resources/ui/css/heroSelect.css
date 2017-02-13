@@ -1,0 +1,97 @@
+.addHeroBox:hover {
+    -fx-background-color: rgba(0,0,0, 0.2);
+}
+
+#addHeroPane {
+    -fx-background-image: url("/ui/mimic_transparency_background.PNG");
+    -fx-background-radius: 100px;
+}
+
+.hero-name {
+    -fx-padding: 15px 0px 0px 15px;
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+}
+
+.hero-image {
+    -fx-padding: 0px 0px 20px 0px;
+}
+
+.button {
+    -fx-background-color:
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.button:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+#background-pane{
+    -fx-pref-height: 720.0;
+    -fx-pref-width: 1280.0;
+    -fx-alignment: center;
+	-fx-background-image: url("/ui/duxcom-background.png");
+    -fx-background-size: 1280.0 720.0;
+}
+
+#background-rectangle{
+    -fx-background-color:rgba(0,0,0,0.5);
+    -fx-background-radius: 50px;
+}
+
+.labels{
+	-fx-font-family: "Arial";
+	-fx-font-size: 14pt;
+	-fx-text-fill: white;
+}
+
+.hero-box{
+	-fx-alignment: center;
+}
+
+#container{
+	-fx-alignment: top_right;
+
+}
+
+#rogue{
+	-fx-background-image: url("/heroes/rogue/rogue_none_none.png");
+	-fx-background-size: 130.0, 150.0;
+    -fx-background-position: bottom;
+}
+#archer{
+	-fx-background-image: url("/heroes/archer/archer_none_none.png");
+	-fx-background-size: 130.0, 150.0;
+    -fx-background-position: bottom;
+}
+#cavalier{
+	-fx-background-image: url("/heroes/cavalier/cavalier_none_none.png");
+	-fx-background-size: 130.0, 150.0;
+    -fx-background-position: bottom;
+}
+#warlock{
+	-fx-background-image: url("/heroes/warlock/warlock_none_none.png");
+	-fx-background-size: 130.0, 150.0;
+    -fx-background-position: bottom;
+}
+#priest{
+	-fx-background-image: url("/heroes/priest/priest_none_none.png");
+	-fx-background-size: 130.0, 150.0;
+    -fx-background-position: bottom;
+}
+#knight{
+	-fx-background-image: url("/heroes/knight.png");
+	-fx-background-size: 130.0, 150.0;
+    -fx-background-position: bottom;
+}

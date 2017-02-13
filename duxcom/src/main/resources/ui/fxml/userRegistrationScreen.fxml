@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+
+<StackPane id="background-pane" stylesheets="/ui/css/userRegistrationScreen.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.UserRegistrationController">
+    <ImageView id="background-image" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@/ui/duxcom-background.png" />
+    </ImageView>
+    <HBox alignment="CENTER">
+        <AnchorPane id="anchor-pane">
+        <VBox id="contents-box" fillWidth="false" maxHeight="-Infinity" minHeight="525.0" minWidth="350.0">
+            <ImageView id="title-image" fitWidth="360.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/ui/duXCOMLogo.png" />
+                <VBox.margin>
+                    <Insets bottom="10.0"/>
+                </VBox.margin>
+            </ImageView>
+            <VBox id="interact-box">
+                <Label id="title" text="New User" />
+                <Separator maxWidth="-Infinity" minWidth="-Infinity" VBox.vgrow="NEVER" />
+                <Label id="username-label" styleClass="input-labels" text="Username" />
+                <TextField id="username-field" fx:id="usernameField" maxWidth="-Infinity" styleClass="input-textfields" />
+                <Label id="first-name-label" styleClass="input-labels" text="First Name" />
+                <TextField id="first-name-field" fx:id="firstNameField" maxWidth="-Infinity" styleClass="input-textfields" />
+                <Label id="middle-name-label" styleClass="input-labels" text="Middle Name" />
+                <TextField id="middle-name-field" fx:id="middleNameField" maxWidth="-Infinity" styleClass="input-textfields" />
+                <Label id="last-name-label" styleClass="input-labels" text="Last Name" />
+                <TextField id="last-name-field" fx:id="lastNameField" maxWidth="-Infinity" styleClass="input-textfields" />
+                <Label id="password-label" styleClass="input-labels" text="Password" />
+                <PasswordField id="password-field" fx:id="passwordField" maxWidth="-Infinity" styleClass="input-passwordfields" />
+                <Label id="password-check-label" styleClass="input-labels" text="Re-enter Password" />
+                <PasswordField id="password-check-field" fx:id="passwordCheckField" maxWidth="-Infinity" styleClass="input-passwordfields" />
+                <Button id="register-button" fx:id="registerButton" mnemonicParsing="false" styleClass="input-buttons" text="CREATE USER">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Button>
+                <Button id="back-button" fx:id="backButton" mnemonicParsing="false" styleClass="input-buttons" text="BACK TO LOGIN SCREEN">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Label id="error-label" fx:id="errorLabel">
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin>
+                </Label>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+            </VBox>
+        </VBox>
+        </AnchorPane>
+        <Pane id="right-pane" />
+    </HBox>
+</StackPane>

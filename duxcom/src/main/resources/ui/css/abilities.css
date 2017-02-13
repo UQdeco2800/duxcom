@@ -1,0 +1,39 @@
+.ap {
+    -fx-background-color: blue;
+}
+
+.health {
+    -fx-background-color: red;
+}
+
+.armour {
+    -fx-background-color: green;
+}
+
+.button {
+    -fx-border-color: whitesmoke;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-opacity: 0.5;
+    -fx-background-radius: 6px;
+    -fx-text-fill: white;
+    -fx-font-size: 9px;
+}
+
+.button:hover {
+-fx-border-color: white;
+}
+
+.label {
+    -fx-text-fill: whitesmoke;
+    -fx-font-size: 17px;
+}
+
+.upgrade-points {
+    -fx-font-size: 12px;
+}
+
+.selected {
+    -fx-opacity: 1;
+}

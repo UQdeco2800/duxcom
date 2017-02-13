@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="mainFxmlClass" stylesheets="/ui/css/lootpopup.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.LootPopUpController">
+   <children>
+      <AnchorPane layoutX="111.0" prefHeight="38.0" prefWidth="281.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="281.0" styleClass="labels" text="Loot" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="scrollAnchorPane" layoutX="14.0" layoutY="38.0" prefHeight="294.0" prefWidth="474.0">
+         <children>
+            <ScrollPane fx:id="lootBox" layoutX="53.0" layoutY="66.0" prefHeight="294.0" prefWidth="454.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="23.0" layoutY="332.0" prefHeight="68.0" prefWidth="454.0">
+         <children>
+            <Button fx:id="pickSelectedBtn" layoutX="48.0" layoutY="14.0" mnemonicParsing="false" onAction="#takeSelectedItems" prefWidth="85.0" styleClass="buttons" text="Pick Up Item">
+            </Button>
+            <Button fx:id="discardBtn" layoutX="185.0" layoutY="14.0" mnemonicParsing="false" onAction="#discardSelectedItems" prefWidth="85.0" styleClass="buttons" text="Discard Item">
+            </Button>
+            <Button fx:id="pickAllBtn" layoutX="322.0" layoutY="14.0" mnemonicParsing="false" onAction="#pickUpAll" prefWidth="85.0" styleClass="buttons" text="Pick Up All">
+            </Button>
+            <Label fx:id="message" id="message" alignment="CENTER" layoutX="78.0" layoutY="47.0" prefHeight="15.0" prefWidth="299.0" styleClass="labels">
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

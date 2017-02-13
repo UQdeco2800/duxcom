@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<HBox id="background-pane" stylesheets="/ui/css/leaderboardScreen.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.LeaderboardController">
+      <Pane styleClass="content-panes" HBox.hgrow="ALWAYS" />
+      <Pane styleClass="content-panes" HBox.hgrow="ALWAYS">
+	      <Pane id="contents-box" layoutX="-191.0" layoutY="104.0">
+	      
+	      		<Text id="leader-board-title" fx:id="leaderboardLabel" layoutX="66.0" layoutY="91.0" text="Leader Board" wrappingWidth="300.0" />
+                <Separator id="separator" layoutX="40.0" layoutY="125.0" />
+                
+                <Text id="score-text" fx:id="scoreText1" layoutX="40.0" layoutY="185.0" text="Score 1" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText2" layoutX="40.0" layoutY="215.0" text="Score 2" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText3" layoutX="40.0" layoutY="245.0" text="Score 3" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText4" layoutX="40.0" layoutY="275.0" text="Score 4" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText5" layoutX="40.0" layoutY="305.0" text="Score 5" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText6" layoutX="40.0" layoutY="335.0" text="Score 6" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText7" layoutX="40.0" layoutY="365.0" text="Score 7" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText8" layoutX="40.0" layoutY="395.0" text="Score 8" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText9" layoutX="40.0" layoutY="425.0" text="Score 9" wrappingWidth="600.0" />
+                <Text id="score-text" fx:id="scoreText10" layoutX="40.0" layoutY="455.0" text="Score 10" wrappingWidth="600.0" />
+                
+	      
+	      
+	      
+	      </Pane>
+      </Pane>
+      <Pane styleClass="content-panes" HBox.hgrow="ALWAYS">
+          <Button id="back-button" fx:id="backButton" layoutX="335.0" layoutY="22.0" mnemonicParsing="false" text="Back" />
+      </Pane>
+</HBox>

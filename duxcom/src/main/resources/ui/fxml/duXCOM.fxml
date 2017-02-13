@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane id="AnchorPane" minHeight="720" minWidth="1280" xmlns="http://javafx.com/javafx/null"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="uq.deco2800.duxcom.controllers.DuxComController">
+
+    <!-- GAME PANE -->
+    <AnchorPane fx:id="dividerPane" minHeight="720" minWidth="1280" AnchorPane.bottomAnchor="0.0"
+                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- GAME CANVAS -->
+        <AnchorPane fx:id="gamePane" focusTraversable="true" minHeight="720" minWidth="1280"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+
+        <!-- PARTICLE CANVAS -->
+        <AnchorPane fx:id="particlePane" focusTraversable="false" minHeight="720" minWidth="1280"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+                    mouseTransparent="true" visible="true"/>
+
+    </AnchorPane>
+
+</AnchorPane>

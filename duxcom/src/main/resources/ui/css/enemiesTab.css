@@ -1,0 +1,66 @@
+/*Individual Items css */
+.box {
+    -fx-border-color: #2e8b57;
+    -fx-background-color: #222222;
+    -fx-border-width: 2px;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-min-width: 150px;
+    -fx-alignment:center;
+    -fx-min-height:130px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/*Whole pane fx id */
+#rootPane {
+    -fx-background-color: #222222;
+    -fx-background-radius: 5;
+}
+
+/*button pane fx id */
+#tabPane {
+}
+
+/*close button fx id */
+#closeButton {
+    -fx-font-size: 10;
+    -fx-text-alignment: center;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(180,50,50,0.9), rgba(255,255,255,0));
+}
+
+/*Buttons*/
+.buttons{
+    -fx-text-alignment: center;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+.buttons:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+
+}

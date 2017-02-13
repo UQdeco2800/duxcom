@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="300.0" style="-fx-background-color: rgba(64, 64, 64, 1);" stylesheets="@../../css/default/button.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.interfaces.gameinterface.heropopup.controllers.EquippedUIController">
+   <children>
+      <Pane fx:id="primaryPane" layoutX="33.0" layoutY="39.0" onMouseClicked="#primaryClicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: rgba(255,255, 255, 1);">
+         <children>
+            <ImageView fx:id="primaryImage" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="secondaryPane" layoutX="214.0" layoutY="39.0" onMouseClicked="#secondaryClicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: rgba(255,255, 255, 1);">
+         <children>
+            <ImageView fx:id="secondaryImage" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="armourPane" layoutX="33.0" layoutY="117.0" onMouseClicked="#armourClicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: rgba(255,255, 255, 1);">
+         <children>
+            <ImageView fx:id="armourImage" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="shieldPane" layoutX="214.0" layoutY="117.0" onMouseClicked="#shieldClicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: rgba(255,255, 255, 1);">
+         <children>
+            <ImageView fx:id="shieldImage" fitHeight="42.0" fitWidth="42.0" onMouseClicked="#shieldClicked" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="characterPane" layoutX="95.0" layoutY="39.0" prefHeight="146.0" prefWidth="98.0" style="-fx-background-color: rgba(255,255, 255, 1);">
+         <children>
+            <ImageView fx:id="characterImage" fitHeight="146.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Button fx:id="equipButton" layoutX="25.0" layoutY="267.0" mnemonicParsing="false" onAction="#unequipClicked" text="Unequip" />
+      <Label layoutX="30.0" layoutY="81.0" text="Primary" textFill="WHITE" />
+      <Label layoutX="212.0" layoutY="81.0" text="Secondary" textFill="WHITE" />
+      <Label layoutX="30.0" layoutY="159.0" text="Armour" textFill="WHITE" />
+      <Label layoutX="212.0" layoutY="159.0" text="Shield" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#unselectedhero {
+	-fx-background-color: green;
+	-fx-background-radius: 21;
+}
+
+#selectedhero {
+	-fx-background-color: #FF0;
+	-fx-background-radius: 21;
+}

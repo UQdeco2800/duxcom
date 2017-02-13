@@ -1,0 +1,10 @@
+mainClassName = "uq.deco2800.duxcom.DuxComLauncher"
+
+dependencies {
+    testCompile "org.testfx:testfx-core:4.0.+"
+    testCompile "org.testfx:testfx-junit:4.0+"
+    testCompile "org.testfx:testfx-legacy:4.0.+", {
+        exclude group: "junit", module: "junit"
+    }
+    testCompile group: 'org.testfx', name: 'openjfx-monocle', version: '1.8.0_20'
+}

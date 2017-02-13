@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="300.0" style="" stylesheets="@/ui/css/default/button.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.interfaces.gameinterface.heropopup.controllers.LocalChestUIController">
+   <children>
+      <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="50.0" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane fx:id="item1Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot1Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage1" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item2Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot2Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage2" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item3Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot3Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage3" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item4Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot4Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage4" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item5Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot5Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage5" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item6Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot6Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage6" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item7Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot7Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage7" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item8Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot8Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage8" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item9Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot9Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage9" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item10Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot10Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage10" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item11Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot11Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage11" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item12Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot12Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage12" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item13Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot13Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage13" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item14Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot14Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage14" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item15Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot15Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage15" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="item16Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot16Clicked" prefHeight="42.0" prefWidth="42.0" style="-fx-background-color: #777;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <ImageView fx:id="itemImage16" fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <Button fx:id="takeButton" layoutX="50.0" layoutY="20.0" mnemonicParsing="false" onAction="#takeClicked" prefHeight="27.0" prefWidth="77.0" text="Take" />
+      <Button fx:id="takeAllButton" layoutX="50.0" layoutY="60.0" mnemonicParsing="false" onAction="#takeAllClicked" prefHeight="27.0" prefWidth="77.0" text="Take All" />
+      <Pane layoutX="170.0" layoutY="14.0" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000;">
+         <children>
+            <Pane fx:id="chestPane" layoutX="6.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#slot1Clicked" prefHeight="70.0" prefWidth="68.0" style="-fx-background-color: #777;">
+               <children>
+                  <ImageView fx:id="chestImage" fitHeight="70.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+/* Outer AnchorPane */
+#outer-anchor-pane{
+    -fx-pref-width: 1280.0;
+    -fx-pref-height: 720.0;
+}
+
+/* Background image */
+#background-image{
+    -fx-alignment: top-left;
+}
+
+/* contents box background */
+#contents-box{
+	-fx-background-color: transparent;
+}
+
+/* Label text */
+#label-text{
+	-fx-text-fill: rgba(255,255,255,0.9);
+    -fx-font-family: "Arial";
+    -fx-font-size: 14.0;
+}
+
+/* Server text */
+#label-text-server{
+	-fx-text-fill: rgba(255,255,255,0.9);
+    -fx-font-family: "Arial";
+    -fx-font-size: 14.0;
+    
+    -fx-text-align: center;
+}
+
+#heading-text{
+	-fx-text-fill: rgba(255,255,255,0.9);
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 15.0;
+}
+
+#progress-ind {
+	-fx-progress-color: white;
+}
+
+/* Attributes pertaining to the lobby list */
+
+.list-cell:filled:selected {
+    -fx-background-color: rgba(0,0,0,0.3);
+}
+
+.list-cell:filled {
+    -fx-text-fill: rgba(255,255,255,0.9);
+}
+
+.list-cell:filled:hover {
+    -fx-text-fill: rgba(255,255,255,0.6);
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+	-fx-background-color: transparent;
+	-fx-cell-size: 36px;
+}
+
+.titled-pane
+{
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color: white;
+    -fx-focus-color: transparent;
+}
+
+
+/* Credit to @coleenmckay */
+
+/* Bg of Multiplayer Header */
+.titled-pane > .title{
+    -fx-font-family: "Arial";
+    -fx-text-alignment: center;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 3,3,3,3;
+    -fx-background-insets: 0,1,2,0;
+    -fx-font-size: 14.0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+/* Content drop down of Multiplayer */
+.titled-pane > *.content{
+    -fx-border-color: transparent;
+    -fx-background-color: rgba(0,0,0,0.6);
+    
+    
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-radius: 3px;
+ }

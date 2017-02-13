@@ -1,0 +1,71 @@
+/**
+ * JUST SCROLL DOWN 90% OF THIS FILE IS UESLESS IGNORE IT AND LOOK AT THE OTHER COMMENTS
+ */
+
+allprojects {
+    group = 'uq.deco2800.duxcom'
+    /**
+     * THIS VERSION DOES LITERALLY NOTHING IGNORE IT
+     * SCROLL DOWN AND CHANGE THE DEPENDENCIES VERSION FOR SINGULARITY STUFF
+     */
+    version = '0.2-SNAPSHOT'
+}
+
+configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor(0, 'seconds')
+}
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
+    apply plugin: 'eclipse';
+    apply plugin: 'idea';
+    apply plugin: 'jacoco';
+
+    jacoco {
+          toolVersion = "0.7.7.201606060606"
+    }
+
+    test {
+      jacoco {
+          append = false
+          destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+      }
+    }
+
+    tasks.withType(Javadoc) {
+      options.addStringOption('Xdoclint:none', '-quiet')
+    }
+
+    javadoc {
+      options.tags = ['require', 'ensure']
+    }
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        maven { url 'http://deco2800-artifactory.uqcloud.net//artifactory/libs-release/' }
+    }
+    dependencies {
+        /**
+         * ===================== CHANGE THE SINGULARITY STUFF HERE =====================
+         */
+        // DECO2800 dependencies
+        compile (group: 'uq.deco2800.singularity', name: 'common', version: '0.5-SNAPSHOT', changing: true)
+        compile (group: 'uq.deco2800.singularity', name: 'clients', version: '0.5-SNAPSHOT', changing: true)
+
+        /**
+         * ===================== CAN IGNORE THE REST OF THE FILE NOW =====================
+         */
+
+        // Testing related packages
+        testCompile group: 'org.dbunit', name: 'dbunit', version: '2.5.1'
+        testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+
+        // Logging via Log4J 2.0 using the SLF4J API
+        compile group: 'org.slf4j', name:'slf4j-api', version: '1.7.12'
+    }
+
+}

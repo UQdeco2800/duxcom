@@ -1,0 +1,118 @@
+/*
+* Player Rewards Screen StyleSheet
+*/
+
+
+/* Background Pane */
+#background-pane{
+    -fx-pref-height: 720.0;
+    -fx-pref-width: 1280.0;
+    -fx-alignment: center;
+	-fx-background-image: url("/ui/duxcom-background.png");
+    -fx-background-size: 1280.0 720.0;
+}
+
+/* Content panes filling the screen */
+.content-panes{
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 200.0;
+}
+
+/* Username */
+#username{
+    -fx-font: 40.0 Arial;
+    -fx-fill: white;
+}
+
+/* Achievement Title */
+#achievement-title{
+    -fx-font: 13.0 Arial;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+/* Achievement Description */
+#achievement-desc{
+    -fx-font: 12.0 Arial;
+    -fx-fill: white;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+}
+
+/* Pane containing username, achievements and skin preview panel */
+#contents-box{
+    -fx-pref-height: 500.0;
+    -fx-pref-width: 800.0;
+	-fx-alignment: bottom-center;
+    -fx-text-alignment: left;
+    -fx-padding: 0.0 8.0 8.0 8.0;
+	-fx-background-image: url("/ui/borders/Player-Rewards.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 800.0 500.0;
+    -fx-background-position: bottom;
+}
+
+/* Skin preview pane */
+#preview-pane{
+    -fx-pref-height: 148.0;
+    -fx-pref-width: 160.0;
+	-fx-background-image: url("/ui/skin-preview-bg.png");
+    -fx-background-size: 160.0 148.0;
+}
+
+/* Achievement icons */
+.achievement-buttons{
+    -fx-pref-height: 55.0;
+    -fx-pref-width: 55.0;
+    -fx-background-insets: 0,1,2,0;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-radius: 5,4,3,5;
+}
+
+/* Button to navigate back to the load screen*/
+#back-button{
+	-fx-pref-width: 70.0;
+	-fx-pref-height: 35.0;
+    -fx-text-alignment: center;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-font-size: 14.0;
+}
+
+/* When user hovers over back button */
+#back-button:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+/* Grid pane containing achievement icons */
+#grid-pane{
+    -fx-text-alignment: center;
+    -fx-pref-height: 270.0;
+    -fx-pref-width: 475.0;
+}
+
+/* Separator */
+#separator{
+    -fx-pref-height: 1.0;
+    -fx-pref-width: 710.0;
+}
+
+/* Separator Stroke */
+#separator:horizontal .line {
+    -fx-border-color: radial-gradient(radius 100%, rgba(153,122,80,0.5), #d0d0d0, rgba(153,122,80,0.5));
+}

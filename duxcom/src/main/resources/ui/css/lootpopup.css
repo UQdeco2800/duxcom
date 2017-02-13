@@ -1,0 +1,157 @@
+/*Loot Window css */
+.mainFxmlClass {
+    -fx-background-color: rgba(0,0,0,0.8);
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius:  10 10 10 10;
+    -fx-border-width: 0;
+}
+
+/*Labels css */
+.labels {
+    -fx-text-fill: white;
+}
+
+/*Individual item css */
+.itemBox {
+    -fx-border-width: 2px;
+    -fx-border-color: #2e8b57;
+    -fx-border-radius: 5;
+    -fx-background-color: #222222;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+    -fx-spacing: 5;
+    -fx-min-width: 100px;
+    -fx-min-height:10px;
+    -fx-cursor:hand;
+}
+
+/*Individual Item text color */
+.lootText{
+    -fx-fill: white;
+}
+
+/*Title pane border-color */
+#lootBox{
+    -fx-background: #222222;
+    -fx-border-color: black;
+}
+
+#lootBox .increment-button, 
+#lootBox .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-pref-height:0;
+
+}
+
+#lootBox  .scroll-bar .increment-arrow,
+#lootBox  .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding:0;
+}
+
+
+#lootBox .scroll-bar:vertical .track-background {
+    -fx-background-color: transparent;
+    -fx-pref-width:0px;
+    -fx-opacity:0;
+    visibility: hidden;
+}
+
+#lootBox .scroll-bar:vertical .track {
+    -fx-background-color:black;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+#lootBox .scroll-bar:vertical .thumb {
+-fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+    -fx-pref-width:3px;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+#lootBox .scroll-bar:vertical:hover {
+    -fx-cursor:hand;
+    -fx-pref-width:15px;
+}
+
+/*Title pane text fill */
+.titled-pane{
+    -fx-text-fill: white;
+}
+
+/*Titled pane css */
+.titled-pane > .title{
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-font-size: 14.0;
+}
+
+.titled-pane > .title:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+/*Arrow button css*/
+.titled-pane > .title > .arrow-button .arrow{
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+/*Title pane border */
+.titled-pane > .content{
+    -fx-border-color: #222222;
+}
+
+/*Buttons css */
+.buttons{
+    -fx-text-alignment: center;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-font-size:12.0px;
+}
+
+.buttons:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+#message {
+    -fx-font-family:"Arial";
+    -fx-font-size: 14.0;
+}

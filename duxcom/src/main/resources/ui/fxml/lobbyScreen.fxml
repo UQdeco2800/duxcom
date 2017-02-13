@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="outer-anchor-pane" fx:id="anchorPane" stylesheets="/ui/css/lobbyScreen.css" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.LobbyController">
+	
+	<!-- Background image -->
+	<ImageView id="background-image" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+    	<Image url="@/lobby/lobby_background.png"/>
+	</ImageView>
+	
+	<!-- Lobby list background image -->
+	<ImageView x="225" y="70" fitHeight="580.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+    		<Image url="@/lobby/players_bg.png"/>
+	</ImageView>
+	
+	<!-- Server info background image -->
+	<ImageView x="617" y="70" fitHeight="226.0" fitWidth="437.0" pickOnBounds="true" preserveRatio="true">
+    		<Image url="@/lobby/server_info_bg.png"/>
+	</ImageView>
+
+    <!-- Lobby list -->
+	<VBox id="contents-box" fillWidth="false" minHeight="0" minWidth="0" prefHeight="530.0" prefWidth="290.0" AnchorPane.topAnchor="95.0" AnchorPane.leftAnchor="250.0">
+       			<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            		<children>
+	            		<Label id="heading-text" layoutX="82.0" layoutY="31.0" text="Players in Lobby" />
+	            		<ListView fx:id="mpLobbyList" layoutX="23.0" layoutY="75.0" prefHeight="390.0" prefWidth="244.0" />
+            		</children>
+         		</AnchorPane>
+	</VBox>
+
+	<!-- Server info panel -->
+	<VBox id="contents-box" fillWidth="false" minHeight="0" minWidth="0" prefHeight="179.0" prefWidth="389.0" AnchorPane.topAnchor="94.0" AnchorPane.leftAnchor="641.0">
+       			<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            		<children>
+               			<ProgressIndicator id="progress-ind" layoutX="64.0" layoutY="42.0" />
+			   			<Label fx:id="mpLoadStatusLabel" id="label-text-server" layoutX="40.0" layoutY="115.0" text="Waiting to join" />
+			   			
+			   			<Label id="label-text" layoutX="194.0" layoutY="54.0" text="Server:" />
+			   			<Label fx:id="mpServerNameLabel" id="label-text" layoutX="244.0" layoutY="54.0" prefHeight="17.0" prefWidth="209.0" text="Server Name Placeholder" textAlignment="CENTER" />
+			   			
+			   			<Label id="label-text" layoutX="194.0" layoutY="109.0" text="Map:" />
+			   			<Label fx:id="mpMapNameLabel" id="label-text" layoutX="231.0" layoutY="109.0" prefHeight="17.0" prefWidth="200.0" text="Not Chosen" textAlignment="CENTER" />
+            		</children>
+         		</AnchorPane>
+	</VBox>
+
+	<!-- Admin and user titled panes -->
+	<VBox id="contents-box" fillWidth="false" minHeight="0" minWidth="0" prefHeight="305.0" prefWidth="437.0" AnchorPane.topAnchor="356.0" AnchorPane.leftAnchor="618.0">
+		 		<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="255.0" prefWidth="387.0">
+            		<children>
+               			<TitledPane fx:id="acPanel" animated="false" disable="true" layoutX="0.0" layoutY="0.0" text="Admin Controls">
+                 			<content>
+                   				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        			<children>
+                           				<Button fx:id="acStartGame"  disable="true" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Start Game" />
+						   				<Button fx:id="acDitchGame" disable="true" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Ditch Game" />
+						   				<Button fx:id="acOpenServer"  layoutX="14.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Open Server" />
+						   				
+						   				<Label layoutX="24.0" layoutY="130.0" text="Server state:" />
+						   				<Label fx:id="acServerStateLabel" layoutX="24.0" layoutY="147.0" text="CLOSED" />
+                        			</children>
+                     			</AnchorPane>
+                 			</content>
+               			</TitledPane>
+			   			<TitledPane fx:id="ucPanel" animated="false" disable="true" layoutX="230.0" layoutY="0.0" text="User Controls">
+			   				<content>
+			   					<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+			   						<children>
+			   							<Button fx:id="ucLeaveServer"  layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Leave Lobby" />
+                        			</children>
+                     			</AnchorPane>
+                 			</content>
+               			</TitledPane>
+            		</children>
+            	</AnchorPane>
+     		
+     		
+	</VBox>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane id="addHeroPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0" prefWidth="833.0" style="-fx-background-color: white;" styleClass="addHeroPane" stylesheets="/ui/css/heroSelect.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.heroselectcontrollers.AddHeroController">
+   <children>
+      <HBox id="container" prefHeight="117.0" prefWidth="833.0">
+         <children>
+            <VBox fx:id="rogue" id="rogue" prefHeight="200.0" prefWidth="100.0" onMouseClicked="#addSelectedHero" styleClass="hero-box">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="false" />
+                  <Label text="Rogue" styleClass="labels" />
+               </children></VBox>
+            <VBox fx:id="archer" id="archer" prefHeight="200.0" prefWidth="100.0" onMouseClicked="#addSelectedHero" styleClass="hero-box">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="false" />
+                  <Label text="Archer" styleClass="labels" />
+               </children></VBox>
+            <VBox fx:id="cavalier" id="cavalier" prefHeight="200.0" prefWidth="100.0" onMouseClicked="#addSelectedHero" styleClass="hero-box">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="false" />
+                  <Label text="Cavalier" styleClass="labels" />
+               </children></VBox>
+            <VBox fx:id="warlock" id="warlock" prefHeight="200.0" prefWidth="100.0" onMouseClicked="#addSelectedHero" styleClass="hero-box">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="false" />
+                  <Label text="Warlock" styleClass="labels" />
+               </children></VBox>
+            <VBox fx:id="priest" id="priest" prefHeight="200.0" prefWidth="100.0" onMouseClicked="#addSelectedHero" styleClass="hero-box">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="false" />
+                  <Label text="Priest" styleClass="labels" />
+               </children></VBox>
+            <VBox fx:id="knight" id="knight" prefHeight="200.0" prefWidth="100.0" onMouseClicked="#addSelectedHero" styleClass="hero-box">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="130.0" pickOnBounds="true"  preserveRatio="false" />
+                  <Label text="Knight" styleClass="labels" />
+               </children></VBox>
+            <Button fx:id="btnCloseAddHero" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#closeAddHero" prefHeight="20.0" prefWidth="20.0" text="X" />
+         </children>
+      </HBox>
+   </children>
+</Pane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<HBox id="background-pane" stylesheets="/ui/css/playerRewardsScreen.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.PlayerRewardsController">
+      <Pane styleClass="content-panes" HBox.hgrow="ALWAYS" />
+      <Pane styleClass="content-panes" HBox.hgrow="ALWAYS">
+            <Pane id="contents-box" layoutX="-191.0" layoutY="104.0">
+                <GridPane id="grid-pane" layoutX="70.0" layoutY="161.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" prefWidth="115.0" />
+                        <ColumnConstraints hgrow="NEVER" prefWidth="115.0" />
+                        <ColumnConstraints hgrow="NEVER" prefWidth="115.0" />
+                        <ColumnConstraints hgrow="NEVER" prefWidth="115.0" />
+               <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="115.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="75.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="75.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="75.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="75.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                        <Button fx:id="numLoginButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="achievement-buttons" text="Login 1" />
+                        <Button fx:id="numKillsButton1" mnemonicParsing="false" styleClass="achievement-buttons" text="Kills 1" GridPane.columnIndex="1" />
+                        <Button fx:id="numLoginButton2" mnemonicParsing="false" styleClass="achievement-buttons" text="Login 2" GridPane.rowIndex="1" />
+                        <Button fx:id="numDeathsButton1" mnemonicParsing="false" styleClass="achievement-buttons" text="Deaths 1" GridPane.columnIndex="2" />
+                        <Button fx:id="timeStageButton1" mnemonicParsing="false" styleClass="achievement-buttons" text="Time 1" GridPane.columnIndex="3" />
+                        <Button fx:id="numKillsButton2" mnemonicParsing="false" styleClass="achievement-buttons" text="Kills 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="numDeathsButton2" mnemonicParsing="false" styleClass="achievement-buttons" text="Deaths 2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="timeStageButton2" mnemonicParsing="false" styleClass="achievement-buttons" text="Time 2" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button fx:id="numLoginButton3" mnemonicParsing="false" styleClass="achievement-buttons" text="Login 3" GridPane.rowIndex="2" />
+                        <Button fx:id="numKillsButton3" mnemonicParsing="false" styleClass="achievement-buttons" text="Kills 3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="numDeathsButton3" mnemonicParsing="false" styleClass="achievement-buttons" text="Deaths 3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="timeStageButton3" mnemonicParsing="false" styleClass="achievement-buttons" text="Time 3" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button fx:id="numLoginButton4" mnemonicParsing="false" styleClass="achievement-buttons" text="Login 4" GridPane.rowIndex="3" />
+                        <Button fx:id="numKillsButton4" mnemonicParsing="false" styleClass="achievement-buttons" text="Kills 4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button fx:id="numDeathsButton4" mnemonicParsing="false" styleClass="achievement-buttons" text="Deaths 4" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Button fx:id="timeStageButton4" mnemonicParsing="false" styleClass="achievement-buttons" text="Time 4" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Button fx:id="tutorialButton" mnemonicParsing="false" styleClass="achievement-buttons" text="Tutorial" GridPane.columnIndex="4" />
+                        <Button fx:id="secretButton" mnemonicParsing="false" styleClass="achievement-buttons" text="Random" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                </GridPane>
+                <Text id="achievement-title" fx:id="achievementTitleLabel" layoutX="555.0" layoutY="185.0" text="" wrappingWidth="160.0" />
+                <Pane id="preview-pane" fx:id="skinPreviewContainer" layoutX="555.0" layoutY="200.0">
+                <ImageView fx:id="skinPreviewImageView" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" />
+                </Pane>
+                <Text id="achievement-desc" fx:id="achievementDescriptionLabel" layoutX="555.0" layoutY="374.0" text="" wrappingWidth="160.0" />
+                <Text id="username" fx:id="usernameLabel" layoutX="66.0" layoutY="91.0" text="Text" wrappingWidth="460.0" />
+                <Separator id="separator" layoutX="41.0" layoutY="125.0" />
+            </Pane>
+      </Pane>
+      <Pane styleClass="content-panes" HBox.hgrow="ALWAYS">
+          <Button id="back-button" fx:id="backButton" layoutX="335.0" layoutY="22.0" mnemonicParsing="false" text="Back" />
+      </Pane>
+</HBox>

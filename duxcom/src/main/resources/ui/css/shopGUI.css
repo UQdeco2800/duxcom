@@ -1,0 +1,194 @@
+/*Root pane for shop pop up*/
+.rootPane {
+    -fx-background-color: rgba(0,0,0,0.8);
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius:  10 10 10 10;
+    -fx-border-width: 0;
+}
+
+/*Labels css */
+.labels {
+    -fx-text-fill: white;
+}
+
+/*Individual Items css */
+.box {
+    -fx-border-color: #2e8b57;
+    -fx-background-color: #222222;
+    -fx-border-width: 2px;
+    -fx-padding: 5;
+    -fx-spacing: 5;
+    -fx-min-width: 170px;
+    -fx-alignment: center;
+    -fx-min-height:130px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.itemText{
+	-fx-fill: white;
+}
+
+/*item pane inside scroll pane*/
+#itemPane {
+    -fx-alignment: center;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-padding:5;
+}
+
+/*Scroll pane css */
+#scrollPane {
+    -fx-background: #222222;
+}
+
+/*Buttons*/
+.buttons{
+    -fx-text-alignment: center;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+.buttons:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+/*Combo-box styling */
+.combo-box .list-cell{
+    -fx-background: #222222;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+}
+
+/*Combo-box-popup list css */
+.combo-box-popup .list-view{
+	-fx-font-family: "Arial";
+    -fx-background-color: #222222;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.8) , 8, 0.0 , 0 , 0 );
+}    
+
+.combo-box-popup .list-view .list-cell{
+    -fx-background-color: #222222;
+    -fx-font-family: "Arial";
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, 
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover{
+	-fx-text-fill: white;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+/*Combo-box-base styling */
+.combo-box-base{
+    -fx-text-alignment: center;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+.combo-box-base:hover{
+	-fx-cursor: hand;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+
+}
+
+.combo-box-base:focused{
+	-fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+	-fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+/*Hidden arrow in combo-box */
+.combo-box .arrow, .combo-box .arrow-button{
+    -fx-background-color: transparent;
+}
+
+/*Scroll pane, scroll bar styling */
+.scroll-bar .increment-button {
+  	visibility: hidden;
+}
+
+.scroll-bar .decrement-button {
+  	visibility: hidden;
+}
+
+.scroll-bar:vertical {
+  	-fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track-background {
+  	visibility: hidden;
+}
+
+.scroll-bar:vertical .track {
+  	visibility: hidden;
+}
+
+.scroll-bar:vertical .thumb {
+ 	-fx-background-color:
+ 		#090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+ 	-fx-background-radius: 5,4,3,5;
+	-fx-background-insets: 0,1,2,0;
+}
+
+.scroll-bar:vertical .thumb:hover {
+	-fx-background-color:
+		#090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+	
+}
+
+.scroll-bar:vertical .thumb:pressed {
+ 	-fx-background-color: 
+ 		#090a0c,
+       	linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+	    linear-gradient(#20262b, #191d22),
+	    radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}

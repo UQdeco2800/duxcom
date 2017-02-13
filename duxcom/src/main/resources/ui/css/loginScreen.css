@@ -1,0 +1,117 @@
+/*
+* Login Screen StyleSheet
+*/
+
+/* Main Pane and Horizontal Box*/
+#background-pane, #horizontal-box{
+    -fx-pref-height: 800.0;
+    -fx-pref-width: 1210.0;
+    -fx-alignment: center;
+}
+
+/* Background image */
+#background-image{
+    -fx-alignment: top-left;
+}
+
+/* Right Pane */
+#right-pane{
+    -fx-pref-height: 800.0;
+    -fx-pref-width: 395.0;
+}
+
+/* VBox containing title image and interact-box */
+#contents-box{
+    -fx-pref-height: 500.0;
+	-fx-alignment: center;
+}
+
+/* VBox containing input fields, labels and buttons */
+#interact-box{
+	-fx-alignment: center;
+    -fx-pref-width: 325.0;
+    -fx-pref-height: 375.0;
+	-fx-background-image: url("/ui/borders/Login-Screen.png");
+    -fx-background-size: 325.0 375.0;
+    -fx-background-position: bottom;
+}
+
+/* Labels above each input field */
+.input-labels{
+    -fx-pref-height: 10.0;
+    -fx-pref-width: 250.0;
+    -fx-font: 13.0 Arial;
+    -fx-text-fill: white;
+    -fx-padding: 5.0 0.0 2.0 0.0;
+}
+
+/* User input fields */
+.input-text-fields, .input-password-fields{
+    -fx-pref-height: 25.0;
+    -fx-pref-width: 250.0;
+    -fx-font: 12.0 Arial;
+    -fx-text-fill: black;
+    -fx-background-color: rgba(255,255,255,0.8);
+}
+
+/* User input buttons */
+.input-buttons{
+    -fx-pref-height: 20.0;
+    -fx-pref-width: 130.0;
+    -fx-max-height: 18.0;
+    -fx-max-width: 200.0;
+    -fx-font: 11.0 Arial;
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+.input-buttons:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+
+}
+
+/* Flow Panels */
+.flow-panes{
+    -fx-pref-width: 250.0;
+    -fx-padding: 5.0 5.0 5.0 5.0;
+    -fx-alignment: center;
+}
+
+/* Register & Remember User Labels */
+.query-labels{
+    -fx-font: 11.5 Arial;
+    -fx-text-fill: white;
+}
+
+/* Login button */
+#login-button{
+	-fx-pref-width: 60.0;
+}
+
+/* Register button */
+#register-button{
+	-fx-pref-width: 80.0;
+}
+
+/* Error label */
+#error-label{
+    -fx-alignment: bottom-center;
+    -fx-pref-height: 17.0;
+    -fx-pref-width: 300.0;
+    -fx-font-size: 11.0;
+    -fx-text-fill: white;
+    -fx-padding: 5.0 5.0 15.0 5.0;
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.StackPane?>
+<?import uq.deco2800.duxcom.interfaces.gameinterface.statusbars.ActionPointBar?>
+<?import uq.deco2800.duxcom.interfaces.gameinterface.statusbars.HealthBar?>
+<?import uq.deco2800.duxcom.interfaces.gameinterface.statuslabels.ActionPointLabel?>
+<?import uq.deco2800.duxcom.interfaces.gameinterface.statuslabels.HealthLabel?>
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" stylesheets="@../css/userinterface.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uq.deco2800.duxcom.controllers.UserInterfaceController">
+
+    <!-- Inventory/Shop -->
+    <Button fx:id="heroPopUpButton" focusTraversable="false" layoutX="-68.0" layoutY="167.0" mnemonicParsing="false" onAction="#openHeroPopUp" prefHeight="25.0" prefWidth="156.0" rotate="90.0" styleClass="buttons" text="Hero Menu" />
+    <Button fx:id="shopButton" focusTraversable="false" mnemonicParsing="false" onAction="#openShop" prefHeight="25.0" prefWidth="156.0" rotate="270.0" styleClass="buttons" text="Shop" AnchorPane.rightAnchor="-68.0" layoutY="167.0" />
+    <!-- Objectives (x-position toggle = -190 or 12) -->
+    <TitledPane fx:id="objectivePane" animated="false" collapsible="false" layoutX="-190" layoutY="265.0" onMouseClicked="#toggleObjectives" prefHeight="230.0" prefWidth="200.0" rotate="90.0" styleClass="sideTab" text="Objectives" textFill="WHITE">
+        <TextArea fx:id="logbox" editable="false" focusTraversable="false" layoutX="-10.0" layoutY="22.0" prefHeight="203.0" prefWidth="132.0" rotate="270.0" styleClass="logbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    </TitledPane>
+    <!-- Chat (x-position toggle = -266 or 70) -->
+    <TitledPane fx:id="chatPane" animated="false" collapsible="false" layoutX="-266" layoutY="439.0" onMouseClicked="#toggleChatBox" prefHeight="362.0" prefWidth="220.0" rotate="90.0" styleClass="sideTab" text="Chat" textFill="WHITE">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="366.0" prefWidth="218.0">
+            <!-- I promise you DO NOT want to resize or move these -->
+            <TextArea fx:id="messageDisplayBox" styleClass="chatBox" focusTraversable="false" editable="false" layoutX="-80.0" layoutY="80.0" prefHeight="180.0" prefWidth="340.0" rotate="270" />
+            <TextField styleClass="messageBox" fx:id="messageSendBox" focusTraversable="false" layoutX="32.0" layoutY="150.0" onAction="#sendMessage" prefHeight="30.0" prefWidth="339.0" rotate="270.0" />
+        </AnchorPane>
+    </TitledPane>
+
+    <!-- Abilities -->
+    <HBox fx:id="bottomBoxes" alignment="CENTER" AnchorPane.bottomAnchor="10.0">
+        <VBox fx:id="bottomWrapper" spacing="15">
+
+            <HBox alignment="TOP_CENTER">
+                <AnchorPane>
+                    <Label fx:id="abilityDialogue" visible="true" styleClass="popupTextSmall" />
+                    <Label fx:id="abilityDialogueOne" visible="true" styleClass="popupTextMed" />
+                    <Label fx:id="abilityDialogueTwo" visible="true" styleClass="popupTextLarge" />
+                </AnchorPane>
+            </HBox>
+
+            <HBox fx:id="lootWrapper" alignment="CENTER" spacing="15">
+                <Button fx:id="lootButton" styleClass="lootButton" onAction="#openLoot" prefHeight="35.0" prefWidth="100.0" text="[F] Loot"/>
+            </HBox>
+            <HBox fx:id="abilityButtonBox" spacing="15">
+                <Button fx:id="abilityOneButton" focusTraversable="false" mnemonicParsing="false" onAction="#abilityOne" styleClass="buttons" AnchorPane.bottomAnchor="0.0" />
+                <Button fx:id="abilityTwoButton" focusTraversable="false" mnemonicParsing="false" onAction="#abilityTwo" styleClass="buttons" AnchorPane.bottomAnchor="0.0" />
+                <Button fx:id="weaponAbilityButton" focusTraversable="false" mnemonicParsing="false" onAction="#weaponAbility" styleClass="buttons" AnchorPane.bottomAnchor="0.0" textAlignment="CENTER"/>
+                <Button fx:id="weaponOneButton" focusTraversable="false" mnemonicParsing="false" onAction="#weaponOne" styleClass="buttons" text="ITEM1" AnchorPane.bottomAnchor="0.0" />
+                <Button fx:id="weaponTwoButton" focusTraversable="false" mnemonicParsing="false" onAction="#weaponTwo" styleClass="buttons" text="ITEM2" AnchorPane.bottomAnchor="0.0" />
+                <Button fx:id="utilityAbilityButton" focusTraversable="false" mnemonicParsing="false" onAction="#utilityAbility" styleClass="buttons" AnchorPane.bottomAnchor="0.0" />
+                <Button fx:id="endTurnButton" focusTraversable="false" mnemonicParsing="false" onAction="#endTurn" styleClass="end-turn-button" text="END" AnchorPane.bottomAnchor="0.0" />
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <!-- Player Info -->
+    <AnchorPane fx:id="playerStats" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+
+        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+
+            <HBox alignment="CENTER">
+                <Label fx:id="activeEffectDescription" styleClass="infoBox" visible="false">
+
+                </Label>
+            </HBox>
+
+            <HBox spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+
+                <!-- Stats -->
+                <VBox alignment="BOTTOM_RIGHT">
+
+                    <!--Status Image View-->
+                    <HBox alignment="BOTTOM_RIGHT">
+                        <GridPane fx:id="activeEffectsIconGrid" hgap="10" vgap="10" nodeOrientation="RIGHT_TO_LEFT">
+                            <padding><Insets top="5" right="5" bottom="5" left="5"/></padding>
+                        </GridPane>
+                    </HBox>
+
+
+                    <!-- Player Health -->
+                    <HBox alignment="BOTTOM_RIGHT">
+                        <StackPane>
+                            <HealthBar fx:id="healthBar" styleClass="healthBar" progress="1.0"/>
+                            <HealthLabel fx:id="healthLabel" />
+                        </StackPane>
+                    </HBox>
+
+                    <!-- Player AP -->
+                    <HBox alignment="BOTTOM_RIGHT">
+                        <StackPane>
+                            <ActionPointBar fx:id="actionPointBar" styleClass="pointBar" progress="1.0" />
+                            <ActionPointLabel fx:id="actionPointLabel" />
+                        </StackPane>
+                    </HBox>
+
+                </VBox>
+
+                <VBox alignment="BOTTOM_RIGHT">
+                    <!-- For positioning name over picture -->
+                    <StackPane  AnchorPane.rightAnchor="0.0">
+
+                        <!-- Acts as a border for image -->
+                        <AnchorPane fx:id="heroFrame" styleClass="heroFrame" StackPane.alignment="CENTER" >
+
+                            <!-- Profile Image -->
+                            <ImageView fx:id="heroImage" AnchorPane.topAnchor="7.0" AnchorPane.bottomAnchor="7.0"
+                                       AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" >
+                                <Image url="@../../profileImages/profile_placeholder.png"/>
+                            </ImageView>
+
+                        </AnchorPane>
+
+                        <!-- Player Name -->
+                        <Label fx:id="playerName" styleClass="playerName" text="PlaceHolder" StackPane.alignment="BOTTOM_CENTER"/>
+
+                    </StackPane>
+                </VBox>
+            </HBox>
+        </VBox>
+    </AnchorPane>
+</AnchorPane>

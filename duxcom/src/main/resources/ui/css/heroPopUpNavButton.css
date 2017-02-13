@@ -1,0 +1,23 @@
+FlowPane {
+    -fx-hgap: 6;
+}
+
+Button{
+    -fx-pref-height: 18.0;
+    -fx-pref-width: 60.0;
+    -fx-max-height: 18.0;
+    -fx-max-width: 150.0;
+    -fx-padding: 2;
+    -fx-background-radius: 0;
+    -fx-font: 11.0 Helvetica;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Helvetica";
+    -fx-background-color: rgba(64, 64, 64, 1);/* rgba(4, 180, 4, 1); */
+}
+
+Button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: rgba(64, 120, 64, 1);
+
+}

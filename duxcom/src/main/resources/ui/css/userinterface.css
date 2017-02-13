@@ -1,0 +1,223 @@
+/* Buttons (abilities, inventory and map) */
+.buttons{
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-font-size: 14.0;
+}
+
+.buttons:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+            #090a0c,
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+
+/* End Turn Button */
+.end-turn-button{
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(255,50,50,0.9), rgba(255,255,255,0));
+    -fx-font-size: 14.0;
+}
+
+.end-turn-button:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(255,50,50,0.9), rgba(255,255,255,0));
+}
+
+
+
+/* Side Tab Titles (button part for opening objectives and chat) */
+.sideTab > .title{
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-font-size: 14.0;
+}
+
+.sideTab > .title:hover{
+     -fx-cursor: hand;
+     -fx-background-color:
+             #090a0c,
+             linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+             linear-gradient(#20262b, #191d22),
+             radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+
+/* Make all Side Tabs have transparent-black backgrounds */
+.sideTab > *.content {
+   -fx-background-color: null;
+}
+
+.sideTab > .content {
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-border-color: BLACK;
+}
+
+
+/* Objectives 'logbox' (for holding objective text)*/
+.logbox {
+    -fx-background-color: transparent;
+    -fx-text-fill: WHITE;
+}
+
+.logbox .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.logbox .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+.logbox .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+
+/* Chat box */
+.chatBox {
+    -fx-background-color: transparent;
+    -fx-text-fill: WHITE;
+}
+
+.chatBox .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.chatBox .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+.chatBox .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+
+/* Message box */
+.messageBox {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-text-fill: WHITE;
+}
+
+
+/* Hero Frame */
+.heroFrame, .pointBar, .healthBar {
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+.pointBar > .bar {
+    -fx-background-color: #3399FF;
+}
+
+.healthBar > .bar {
+    -fx-background-color: #66CC00;
+}
+
+
+/* Player Name */
+.playerName {
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-text-fill: WHITE;
+    -fx-text-alignment: CENTER;
+}
+
+/* Hover Box for Active Buffs */
+.infoBox {
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-padding: 10px;
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-text-fill: WHITE;
+    -fx-text-alignment: CENTER;
+    -fx-font-family: "Arial";
+}
+
+/* Loot Button */
+.lootButton {
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-font-weight:bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+    -fx-font-size: 18.0;
+}
+
+.lootButton:hover{
+    -fx-cursor: hand;
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 120%, rgba(153,122,80,0.9), rgba(255,255,255,0));
+}
+
+.popupTextSmall {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14.0;
+    -fx-font-weight:bold;
+    -fx-text-fill: red;
+    -fx-text-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+}
+
+.popupTextMed {
+    -fx-font-family: "Arial";
+    -fx-font-size: 18.0;
+    -fx-font-weight:bold;
+    -fx-text-fill: red;
+    -fx-text-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+}
+
+.popupTextLarge {
+    -fx-font-family: "Arial";
+    -fx-font-size: 24.0;
+    -fx-font-weight:bold;
+    -fx-text-fill: red;
+    -fx-text-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+}
